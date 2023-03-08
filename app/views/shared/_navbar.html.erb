@@ -13,9 +13,9 @@
         <% if user_signed_in? %>
           <%= link_to "Home", myspace_path%>
         <% end %>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#profile">Profile</a>
+        <%= link_to "About", about_path %>
+        <%= link_to "Contact", contact_path %>
+        <%= link_to "Profile", profile_path %>
 
         <% if user_signed_in? %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
