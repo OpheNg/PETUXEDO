@@ -1,41 +1,41 @@
 
-<div class="topnav" id="myTopnav">
-  <div class="logobar">
-    <p>
-      <%= link_to root_path, class: "logoimg" do %>
-        <%= image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1678272565/petuxedo/Sans_titre_-_2023-03-08T114811.714_yusj1p.png", width: '45px' %>
-      <% end %>
-    </p>
-  </div>
-  <div class="rightbar">
-    <%# <a href="#home" class="active">Home</a> %>
+    <div class="topnav" id="myTopnav">
+      <div class="logobar">
+        <p>
+          <%= link_to root_path, class: "logoimg" do %>
+            <%= image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1678272565/petuxedo/Sans_titre_-_2023-03-08T114811.714_yusj1p.png", width: '45px' %>
+          <% end %>
+        </p>
+      </div>
+      <div class="rightbar">
+        <%# <a href="#home" class="active">Home</a> %>
 
-    <% if user_signed_in? %>
-      <%= link_to "Home", myspace_path%>
-    <% end %>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="#profile">Profile</a>
+        <% if user_signed_in? %>
+          <%= link_to "Home", myspace_path%>
+        <% end %>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#profile">Profile</a>
 
-    <% if user_signed_in? %>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-    <% else %>
-      <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-    <% end %>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
+        <% if user_signed_in? %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        <% else %>
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        <% end %>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
 
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
