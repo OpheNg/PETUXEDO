@@ -10,10 +10,14 @@
    <div class="last-creations">
     <h2>Our latest creations</h2>
       <div class="crea">
-        <img src="https://res.cloudinary.com/dhxefoe7j/image/upload/v1678289720/petuxedo/nobgtux_sbwidv.png" height="120px" width="200px"alt="">
-        <img src="https://res.cloudinary.com/dhxefoe7j/image/upload/v1678289720/petuxedo/nobgtux_sbwidv.png"  height="120px" width="200px"alt="">
-        <img src="https://res.cloudinary.com/dhxefoe7j/image/upload/v1678289720/petuxedo/nobgtux_sbwidv.png"  height="120px" width="200px"alt="">
-        <img src="https://res.cloudinary.com/dhxefoe7j/image/upload/v1678289720/petuxedo/nobgtux_sbwidv.png"  height="120px" width="200px"alt="">
+        <%@outfits.last(4).each do |outfit| %>
+          <% outfit.photos.each do |photo| %>
+            <div class="homepic">
+              <%= cl_image_tag photo.key, height:"300px" %>
+            </div>
+
+          <% end %>
+        <% end %>
       </div>
   </div>
 
