@@ -1,11 +1,11 @@
- <div class="all-outfits">
+  <div class="all-outfits">
     <% @outfits.each do |outfit|  %>
     <div class="details">
       <h3><%= outfit.name %></h3>
       <h4><%= outfit.price %> €</h4>
       <p> <%= outfit.description %></p>
         <% outfit.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, height:"400px"%>
+          <%= cl_image_tag photo.key, height:"400px", class:"img"%>
         <% end %>
     </div>
       <br>
@@ -25,3 +25,4 @@
       <%= link_to "New outfit", new_outfit_path %>
     </div>
   <% end %>
+

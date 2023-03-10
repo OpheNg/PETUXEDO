@@ -5,9 +5,25 @@
   background-size: cover;
   min-height: 100vh;
   height: 100%;
+  padding: 40px;
+}
+.home-title{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.home-title p{
+  font-weight: bold;
+  font-family: 'Nunito';
+  align-self: flex-end;
+}
+.home-text{
+  display: flex;
+  flex-direction: column;
+
 }
 .homepage h1{
-  font-size: 90px;
+  font-size: 100px;
   color: rgb(66, 28, 190);
 }
 .crea{
@@ -23,4 +39,7 @@
   display: flex;
   justify-content: center;
   margin: 4px;
+}
+.homepic img{
+  width: 200px;
 }
