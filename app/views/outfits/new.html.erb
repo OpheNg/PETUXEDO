@@ -1,0 +1,20 @@
+ <div class="new-outfit">
+  <div class="add-outfit">
+      <h2>Add an outfit</h2>
+      <%= simple_form_for @outfit do |f| %>
+        <div class="addform">
+          <%= f.input :name %>
+          <%= f.input :pet %>
+          <%= f.input :style %>
+          <%= f.input :color %>
+          <%= f.select :size , Outfit::SIZE %>
+          <%= f.input :price %>
+          <%= f.input :description, as: :text %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          <% f.input :current_user_id, input_html: {value: params[:current_user_id]} %>
+          <br>
+          <%= f.button :submit, 'Add an outfit' %>
+        </div>
+      <% end %>
+    </div>
+ </div>

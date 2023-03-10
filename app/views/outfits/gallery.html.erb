@@ -1,0 +1,16 @@
+<div class="gallery">
+
+
+  <div class="all-outits">
+  <h2>Gallery</h2>
+  <%= link_to "View", outfits_path %>
+  </div>
+
+  <% if current_user.email == 'ophe.ng@live.fr' %>
+    <div class="box-create">
+      <h2>Add a new outfit</h2>
+      <p>To add a creation to the gallery, click here</p>
+      <%= link_to "New outfit", new_outfit_path %>
+    </div>
+  <% end %>
+</div>

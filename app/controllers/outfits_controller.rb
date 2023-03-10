@@ -10,24 +10,25 @@ class OutfitsController < ApplicationController
   end
 
   def new
-    @user = current_user
     @outfit = Outfit.new
+    @user = current_user
   end
 
   def create
-    @user = current_user
     @outfit = Outfit.new(outfit_params)
+    @user = current_user
+    @outfit.user_id = @user.id
     if @outfit.save
+      flash[:notice] = "Outfit created"
       redirect_to outfits_path
     else
-      render :new
+      flash[:notice] = "Something went wrong, please check the form again"
     end
   end
 
   def edit
     @user = current_user
     @outfit = Outfit.find(params[:id])
-
   end
 
   def update
@@ -46,14 +47,14 @@ class OutfitsController < ApplicationController
     redirect_to outfits_path if @outfit.destroy
   end
 
+
   private
 
   def outfit_params
-    params.require(:outfit).permit(:name, :pet, :price, :color, :style, :user_id)
+    params.require(:outfit).permit(:user_id, :name, :pet, :price, :color, :style, :size, :description, photos:[])
   end
 
   def update_outfit_params
-    params.require(:outfit).permit(:name, :pet, :price, :color, :style)
+    params.require(:outfit).permit(:name, :pet, :price, :color, :style, :size,:description,  photos:[])
   end
-
 end

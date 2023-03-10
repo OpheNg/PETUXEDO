@@ -1,0 +1,17 @@
+ <div class="all-outfits">
+    <% @outfits.each do |outfit|  %>
+      <h3><%= outfit.name %></h3>
+      <h4><%= outfit.price %></h4>
+      <p> <%= outfit.description %></p>
+        <% outfit.photos.each do |photo| %>
+          <%= cl_image_tag photo.key, width:"300px" %>
+        <% end %>
+      <br>
+      <% if @user.email != 'ophe.ng@live.fr' %>
+        <%= link_to "Order" %>
+      <% else %>
+        <%= link_to "Edit", edit_outfit_path(outfit) %>
+        <%= link_to "Delete", outfit_path(outfit), method: :delete, data: {confirm:'Do you real want to delete this item?'} %>
+      <% end %>
+    <% end %>
+  </div>
