@@ -6,16 +6,27 @@
       <h1>PETUXEDO</h1>
       <p>Make your companion the prettiest !</p>
     </div>
-    <div class="home-info">
-      <h2>Get a tux for your pet !</h2>
-      <li>Choose among our gallery</li>
-      <li>Submit a customized order</li>
-      <% if user_signed_in? %>
-        <%= link_to "Dashboard", myspace_path, class: "homelink" %>
-      <% else %>
-        <%= link_to "Register", new_user_registration_path, class: "homelink"  %>
-      <% end %>
+    <div class="down">
+
+      <div class="promo">
+        <section class="promotion">
+          <h3>Get 10% off, on your first order !</h3>
+          <h5>Code : <span class="code">WEL10OFF</span></h5>
+        </section>
+      </div>
+
+      <div class="home-info">
+        <h2>Get a tux for your pet !</h2>
+        <li>Choose among our gallery</li>
+        <li>Submit a customized order</li>
+        <% if user_signed_in? %>
+          <%= link_to "Dashboard", myspace_path, class: "homelink" %>
+        <% else %>
+          <%= link_to "Register", new_user_registration_path, class: "homelink"  %>
+        <% end %>
+      </div>
     </div>
+
 
   </div>
 </div>
