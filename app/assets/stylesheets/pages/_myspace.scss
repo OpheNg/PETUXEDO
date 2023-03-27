@@ -3,5 +3,36 @@
   background-position: top right;
   background-size: cover;
   height: 100%;
-  min-height: 100vh;
+  // min-height: 100vh;
+}
+.Dashboard{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 30px;
+}
+
+.dashboard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.upcards{
+  display: flex;
+  justify-content: center;
+}
+.card{
+  background-color: rgba(255, 255, 255, 0.23);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 5px;
+
+}
+.search-tux{
+  width: 50%;
+}
+.myorders{
+  width: 50%;
+
 }

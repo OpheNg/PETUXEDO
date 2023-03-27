@@ -1,36 +1,38 @@
 <div class="myspacepage">
-  <div class="welcoming">
-    <h1>Welcome <%= current_user.email %> !</h1>
-  </div>
-
-  <div class="dashboard">
-
-    <div class="upcards">
-      <div class="search-tux">
-        <h2> Search and find an outfit</h2>
-        <p>Search by pet category, color, theme, etc...</p>
-        <%= link_to "Search", outfits_path %>
-      </div>
-
-      <div class="myorders">
-        <h2>My last orders</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, asperiores suscipit. Quos repellat illo cumque tempore itaque quibusdam animi cupiditate!</p>
-        <%= link_to "My orders" %>
-      </div>
+  <div class="Dashboard">
+    <div class="welcoming">
+      <h1>Welcome <%= current_user.email %> !</h1>
     </div>
 
-    <div class="special-admin">
-      <div class="special">
-        <h2>Special requests</h2>
-        <p>Fill the form to submit your customized request</p>
-        <%= link_to "request form", new_contact_path %>
+    <div class="dashboard">
+
+      <div class="upcards">
+        <div class="card search-tux">
+          <h2> Search and find an outfit</h2>
+          <p>Search by pet category, color, theme, etc...</p>
+          <%= link_to "Search", outfits_path %>
+        </div>
+
+        <div class=" card myorders">
+          <h2>My last orders</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, asperiores suscipit. Quos repellat illo cumque tempore itaque quibusdam animi cupiditate!</p>
+          <%= link_to "My orders" %>
+        </div>
       </div>
 
-      <% if current_user.email == "ophe.ng@live.fr" %>
-        <div class="home-gallery">
-          <%= link_to "Gallery", outfits_path %>
+      <div class="special-admin">
+        <div class="card special">
+          <h2>Special requests</h2>
+          <p>Fill the form to submit your customized request</p>
+          <%= link_to "request form", new_contact_path %>
         </div>
-      <% end %>
+
+        <% if current_user.email == "ophe.ng@live.fr" %>
+          <div class=" card home-gallery">
+            <%= link_to "Gallery", outfits_path %>
+          </div>
+        <% end %>
+      </div>
     </div>
 
   </div>
