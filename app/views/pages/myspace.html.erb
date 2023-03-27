@@ -1,19 +1,21 @@
 <div class="myspacepage">
   <div class="Dashboard">
     <div class="welcoming">
-      <h1>Welcome <%= current_user.email %> !</h1>
+      <h1>Welcome <span class ="user"><%= current_user.email %></span> !</h1>
+
+      <br>
     </div>
 
     <div class="dashboard">
 
       <div class="upcards">
-        <div class="card search-tux">
-          <h2> Search and find an outfit</h2>
+        <div class="card colomn search-tux">
+          <h2> Find an outfit</h2>
           <p>Search by pet category, color, theme, etc...</p>
           <%= link_to "Search", outfits_path %>
         </div>
 
-        <div class=" card myorders">
+        <div class=" card colomn myorders">
           <h2>My last orders</h2>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, asperiores suscipit. Quos repellat illo cumque tempore itaque quibusdam animi cupiditate!</p>
           <%= link_to "My orders" %>
@@ -23,17 +25,23 @@
       <div class="special-admin">
         <div class="card special">
           <h2>Special requests</h2>
-          <p>Fill the form to submit your customized request</p>
+          <p>You want something very special for your pet ?<br>
+          <%# Feel free to submit your request, and we'll get back to you in less than 24h. <br> %>
+          Fill the form down here, with the details of your customized request :)</p>
           <%= link_to "request form", new_contact_path %>
         </div>
 
         <% if current_user.email == "ophe.ng@live.fr" %>
           <div class=" card home-gallery">
-            <%= link_to "Gallery", outfits_path %>
+            <h2 class="admin">Admin outfit</h2>
+            <%= link_to "Manage", outfits_path, class:"manage" %>
           </div>
         <% end %>
       </div>
     </div>
 
+  </div>
+  <div class="brand">
+    <h1>PETUXEDO</h1>
   </div>
 </div>
