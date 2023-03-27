@@ -1,7 +1,24 @@
 class OutfitsController < ApplicationController
+  # def index
+  #   @user = current_user
+  #   @outfits = Outfit.all
+  # end
+
   def index
     @user = current_user
-    @outfits = Outfit.all
+    if params[:query].present?
+      sql_query = " \
+     outfits.name ILIKE :query \
+     OR outfits.pet ILIKE :query \
+     OR outfits.color ILIKE :query \
+     OR outfits.style ILIKE :query \
+     OR outfits.description ILIKE :query \
+      "
+      @outfits = Outfit.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @user = current_user
+      @outfits = Outfit.all
+    end
   end
 
   def show

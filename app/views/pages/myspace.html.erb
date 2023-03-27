@@ -8,7 +8,7 @@
   <div class="search-tux">
     <h2> Search and find an outfit</h2>
     <p>Search by pet category, color, theme, etc...</p>
-    <%= link_to "Search" %>
+    <%= link_to "Search", outfits_path %>
   </div>
   <div class="myorders">
     <h2>My last orders</h2>
@@ -22,9 +22,11 @@
     <%= link_to "request form", new_contact_path %>
   </div>
 
-  <div class="home-gallery">
-    <%= link_to "Gallery", outfits_path %>
-  </div>
+  <% if current_user.email == "ophe.ng@live.fr" %>
+    <div class="home-gallery">
+      <%= link_to "Gallery", outfits_path %>
+    </div>
+  <% end %>
 
  </div>
 
