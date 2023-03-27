@@ -10,7 +10,7 @@
   position: fixed;
   bottom: 8px;
   right: 8px;
-  background-color: rgba(255, 255, 255, 0.23); 
+  background-color: rgba(255, 255, 255, 0.23);
 }
 .Dashboard{
   display: flex;
@@ -40,9 +40,15 @@
   margin: 5px;
 
 }
+.home-gallery{
+  margin-top: 10px;
+}
 .colomn{
   height: auto;
   min-height: 300px;
+}
+.colomn a{
+  margin-top: auto ;
 }
 .search-tux{
   width: 50%;

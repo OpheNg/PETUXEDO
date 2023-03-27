@@ -1,4 +1,14 @@
 <div class="all-outfits">
+
+   <% if current_user.email == 'ophe.ng@live.fr' %>
+    <div class="box-create">
+      <h2>Add a new outfit</h2>
+      <p>To add a creation to the gallery, click here</p>
+      <%= link_to "New outfit", new_outfit_path %>
+    </div>
+  <% end %>
+
+  
   <% @outfits.each do |outfit|  %>
     <div class="tuxcard">
       <div class="details">
@@ -36,12 +46,6 @@
     </div>
   </div>
 
-  <% if current_user.email == 'ophe.ng@live.fr' %>
-    <div class="box-create">
-      <h2>Add a new outfit</h2>
-      <p>To add a creation to the gallery, click here</p>
-      <%= link_to "New outfit", new_outfit_path %>
-    </div>
-  <% end %>
+
 
 </div>
