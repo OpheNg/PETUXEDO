@@ -6,6 +6,7 @@ img.img{
   justify-content: center;
   width: 300px;
   align-self: center;
+  margin-top: auto;
 }
 .all-outfits{
   background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1679993622/petuxedo/Sans_titre_-_2023-03-28T105109.937_nk0xur.png');
@@ -20,7 +21,7 @@ img.img{
   padding: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 .box-create{
   border-radius: 10px;
@@ -56,6 +57,7 @@ img.img{
   margin-bottom: 60px;
   display: flex;
   flex-direction: column;
+  height: auto;
 }
 
 .searching-tux{
