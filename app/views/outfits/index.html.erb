@@ -1,51 +1,71 @@
 <div class="all-outfits">
+  <div class="margbox">
 
-   <% if current_user.email == 'ophe.ng@live.fr' %>
     <div class="box-create">
-      <h2>Add a new outfit</h2>
-      <p>To add a creation to the gallery, click here</p>
-      <%= link_to "New outfit", new_outfit_path %>
-    </div>
-  <% end %>
+      <% if current_user.email == 'ophe.ng@live.fr' %>
+        <div class="link-add">
+          <h2>Add a new outfit</h2>
+          <p>To add a creation to the gallery, click here</p>
+          <%= link_to "New outfit", new_outfit_path %>
+          <br>
+        </div>
+      <% end %>
+        <div class="buttons">
+          <%= link_to "Dashboard", myspace_path, class: "buts" %>
+          <br>
+          <%= link_to "My orders", myspace_path, class: "buts" %>
+          <br>
+          <%= link_to "Custom request", new_contact_path, class:"buts" %>
 
-  
-  <% @outfits.each do |outfit|  %>
-    <div class="tuxcard">
-      <div class="details">
-        <h3><%= outfit.name %></h3>
-        <h4><%= outfit.price %> €</h4>
-        <p> <%= outfit.description %></p>
-          <% outfit.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height:"400px", class:"img"%>
+        </div>
+
+    </div>
+
+
+    <div class="outfits-gallery">
+
+      <div class="searching-tux">
+        <div class="searchbar">
+          <%= form_tag outfits_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "color, fun, dog, ..."
+            %>
+            <br>
+        </div>
+        <div class="bouton">
+          <%= submit_tag "Search" %>
           <% end %>
+        </div>
       </div>
-      <div class="action-links">
-        <br>
-        <% if @user.email != 'ophe.ng@live.fr' %>
-          <%= link_to "Order" %>
-        <% else %>
-          <%= link_to "Edit", edit_outfit_path(outfit) %>
-          <%= link_to "Delete", outfit_path(outfit), method: :delete, data: {confirm:'Do you real want to delete this item?'} %>
+
+      <div class="tuxcard">
+        <% @outfits.each do |outfit|  %>
+          <div class="mono">
+             <div class="details">
+              <h3><%= outfit.name %></h3>
+              <h4><%= outfit.price %> €</h4>
+              <p> <%= outfit.description %></p>
+                <% outfit.photos.each do |photo| %>
+                  <%= cl_image_tag photo.key, height:"400px", class:"img"%>
+                <% end %>
+            </div>
+            <div class="action-links">
+              <br>
+              <% if @user.email != 'ophe.ng@live.fr' %>
+                <%= link_to "Order" %>
+              <% else %>
+                <%= link_to "Edit", edit_outfit_path(outfit) %>
+                <%= link_to "Delete", outfit_path(outfit), method: :delete, data: {confirm:'Do you real want to delete this item?'} %>
+              <% end %>
+            </div>
+          </div>
+
         <% end %>
       </div>
-    </div>
-  <% end %>
 
-  <div class="search-tux">
-    <div class="searchbar">
-      <%= form_tag outfits_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "color, fun, dog, ..."
-        %>
-    </div>
-    <div class="bouton">
-      <%= submit_tag "Search" %>
-      <% end %>
     </div>
   </div>
-
-
 
 </div>

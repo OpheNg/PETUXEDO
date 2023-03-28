@@ -4,5 +4,84 @@ img.img{
   background-color: rgb(237, 237, 237);
   display: flex;
   justify-content: center;
-  max-width: 300px;
+  width: 300px;
+}
+.all-outfits{
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1679993622/petuxedo/Sans_titre_-_2023-03-28T105109.937_nk0xur.png');
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  min-height:100vh ;
+
+}
+.margbox{
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.box-create{
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+
+}
+.buts{
+  text-decoration: none;
+  background-color: rgb(98, 77, 216);
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  font-family:"Nunito";
+
+}
+.buts:hover{
+  background-color: rgb(49, 48, 103);
+  color: white;
+}
+.link-add{
+  border-radius: 10px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.621);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  height: 300px;
+  margin-bottom: 60px;
+}
+.searching-tux{
+  padding: 30px;
+  width: 50%;
+}
+.tuxcard{
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: flex-start;
+}
+.mono{
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.621);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 8px;
+}
+.mono a{
+  text-decoration: none;
+  background-color: rgb(128, 219, 142);
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-family:"Nunito";
+}
+.mono a:hover{
+  background-color:rgb(105, 103, 175);
 }
