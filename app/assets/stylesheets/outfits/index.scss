@@ -5,6 +5,7 @@ img.img{
   display: flex;
   justify-content: center;
   width: 300px;
+  align-self: center;
 }
 .all-outfits{
   background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1679993622/petuxedo/Sans_titre_-_2023-03-28T105109.937_nk0xur.png');
@@ -74,6 +75,8 @@ img.img{
   background-color: rgba(255, 255, 255, 0.621);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   margin: 8px;
+  display: flex;
+  flex-direction: column;
 }
 .mono a{
   text-decoration: none;
@@ -116,6 +119,7 @@ a.redlink:hover{
 .mono h4{
   color: rgb(98, 77, 216);
   font-weight: bold;
+  max-width: 340px;
 }
 a.linkimg{
   background: none;
