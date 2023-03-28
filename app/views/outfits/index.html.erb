@@ -4,9 +4,10 @@
     <div class="box-create">
       <% if current_user.email == 'ophe.ng@live.fr' %>
         <div class="link-add">
-          <h2>Add a new outfit</h2>
+          <h4>New outfit</h4>
+          <br>
           <p>To add a creation to the gallery, click here</p>
-          <%= link_to "New outfit", new_outfit_path %>
+          <%= link_to "Add", new_outfit_path %>
           <br>
         </div>
       <% end %>
@@ -57,7 +58,7 @@
                 <%= link_to "Order" %>
               <% else %>
                 <%= link_to "Edit", edit_outfit_path(outfit) %>
-                <%= link_to "Delete", outfit_path(outfit), method: :delete, data: {confirm:'Do you real want to delete this item?'} %>
+                <%= link_to "Delete", outfit_path(outfit), method: :delete, data: {confirm:'Do you real want to delete this item?'} , class: "redlink"%>
               <% end %>
             </div>
           </div>

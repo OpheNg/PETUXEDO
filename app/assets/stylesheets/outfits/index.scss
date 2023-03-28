@@ -53,7 +53,10 @@ img.img{
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   height: 300px;
   margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
 }
+
 .searching-tux{
   padding: 30px;
   width: 50%;
@@ -84,4 +87,33 @@ img.img{
 }
 .mono a:hover{
   background-color:rgb(105, 103, 175);
+}
+a.redlink{
+  background-color: rgb(230, 160, 136);
+}
+a.redlink:hover{
+  background-color: rgb(190, 69, 36);
+}
+.link-add a{
+  margin-top: auto;
+  text-decoration: none;
+  background-color: rgb(128, 219, 142);
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-family:"Nunito";
+  width: fit-content;
+}
+.link-add a:hover{
+  padding: 8px 12px;
+}
+.link-add h4{
+  color: rgb(98, 77, 216);
+  font-weight: bold;
+}
+.mono h4{
+  color: rgb(98, 77, 216);
+  font-weight: bold;
 }
