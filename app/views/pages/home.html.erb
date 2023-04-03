@@ -7,9 +7,25 @@
       </div>
       <div class="down">
         <div class="home-info">
-          <h2>Get a tux for your pet !</h2>
-          <p>More than 100 outfits</p>
-          <p>Customized creations</p>
+          <h2>Order now !</h2>
+          <div class="promo">
+            <p><span>Get 10% OFF</span> <br> on your first order !</p>
+          </div>
+          <div class="details">
+            <ul>
+              <li>
+                <p>More than 100 outfits</p>
+              </li>
+              <li>
+                <p>Special requests, customized creations</p>
+              </li>
+              <li>
+                <p>Rental service</p>
+              </li>
+            </ul>
+
+          </div>
+
           <% if user_signed_in? %>
             <%= link_to "Dashboard", myspace_path, class: "homelink" %>
           <% else %>

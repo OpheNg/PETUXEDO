@@ -25,7 +25,7 @@
   border-radius: 20px;
   padding: 30px;
   width: 300px;
-  height: 400px;
+  height: 420px;
   // align-self: flex-end;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
   display: flex;
@@ -73,9 +73,24 @@ a.homelink:hover{
 
 // ____________________________________________
 .home-info p{
-  font-size: 18px;
+  font-size: 16px;
 }
-
+.promo p {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+.promo span{
+  background: #f8c44d;
+  padding: 3px 4px;
+  border-radius: 4px;
+}
+.promo span:hover{
+  font-size: 19px;
+}
+.home-info h2{
+  font-weight: bold;
+}
 .right-column{
   background-color: #323232;
   color: rgb(238, 238, 238);
