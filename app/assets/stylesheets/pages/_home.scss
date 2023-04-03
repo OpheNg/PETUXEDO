@@ -84,8 +84,14 @@ a.homelink:hover{
   top: 0;
   height: 100%;
   padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
 
 
+}
+.side-title{
+  text-align: right;
 }
 .homebox{
   display: flex;
@@ -95,4 +101,39 @@ a.homelink:hover{
   background-color: #fffbfb1a;
   border-radius: 10px;
   padding: 18px;
+  margin: 6px 5px;
+}
+.box1{
+  margin-top: 20px;
+}
+.clients-avis{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.etc{
+  align-self: flex-end;
+  padding-right: 10px;
+}
+.social{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  padding: 18px;
+}
+.icons{
+  align-self: center;
+}
+.icons i{
+  font-size: 35px;
+  padding: 10px;
+  color: #6E74FF;
+}
+.icons i:hover{
+  color: white;
+}
+.mail{
+  align-self: center;
 }
