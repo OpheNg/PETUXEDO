@@ -104,6 +104,11 @@ a.homelink:hover{
   border-radius: 10px;
   padding: 18px;
   margin: 6px 5px;
+  display: flex;
+  flex-direction: column;
+}
+.b small{
+  align-self: flex-end;
 }
 .box1{
   margin-top: 20px;
