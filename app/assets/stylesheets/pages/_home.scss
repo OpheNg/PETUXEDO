@@ -49,8 +49,12 @@ a.homelink{
   width: 100%;
   text-align: center;
   color: rgb(237, 237, 237);
-  // background-color: rgb(126, 220, 126);
+  font-weight: bold;
+  font-size: 19px;
+
 }
+  // background-color: rgb(126, 220, 126);
+
 a.homelink:hover{
   background-color:rgb(117, 83, 227) ;
   font-weight: bold;
@@ -83,7 +87,7 @@ a.homelink:hover{
 .promo span{
   background: #f8c44d;
   padding: 3px 4px;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 .promo span:hover{
   font-size: 19px;
