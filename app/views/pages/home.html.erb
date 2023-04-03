@@ -1,32 +1,61 @@
 <div class="homepage">
-
-  <div class="home-text">
-
-    <div class="home-title">
-      <h1>PETUXEDO</h1>
-      <p>Make your companion the prettiest !</p>
-    </div>
-    <div class="down">
-
-      <div class="promo">
-        <section class="promotion">
-          <h3>Get 10% off, on your first order !</h3>
-          <h5>Code : <span class="code">WEL10-OFF</span></h5>
-        </section>
+  <div class="homebox">
+    <div class="home-text">
+      <div class="home-title">
+        <h1>PETUXEDO</h1>
+        <p>Make your companion the prettiest !</p>
       </div>
-
-      <div class="home-info">
-        <h2>Get a tux for your pet !</h2>
-        <p>More than 100 outfits</p>
-        <p>Customized creations</p>
-        <% if user_signed_in? %>
-          <%= link_to "Dashboard", myspace_path, class: "homelink" %>
-        <% else %>
-          <%= link_to "Register", new_user_registration_path, class: "homelink"  %>
-        <% end %>
+      <div class="down">
+        <div class="home-info">
+          <h2>Get a tux for your pet !</h2>
+          <p>More than 100 outfits</p>
+          <p>Customized creations</p>
+          <% if user_signed_in? %>
+            <%= link_to "Dashboard", myspace_path, class: "homelink" %>
+          <% else %>
+            <%= link_to "Register", new_user_registration_path, class: "homelink"  %>
+          <% end %>
+        </div>
       </div>
     </div>
 
+    <section class="right-column">
+      <section class="clients-avis">
+        <div class="side-title">
+        <h3>Our clients speak !</h3>
+        </div>
+        <div class="box1">
+          <div class="stars">
+            étoiles
+          </div>
+          <p>" Very happy of my last order ! <br> Great quality ! "</p>
+          <small> <em>Audrey</em> </small>
 
+        </div>
+        <div class="box2">
+          <div class="stars">
+            étoiles
+          </div>
+          <p>"Thank you so much for responding to my request ! <br> Creation of great quality !"</p>
+          <small> <em>Marika</em></small>
+        </div>
+        <div class="etc">
+          <p>...</p>
+        </div>
+
+      </section>
+      <section class="social">
+        <div class="fol">
+          <h3>Follow us !</h3>
+        </div>
+        <div class="icons">
+          FB INSTA YOUTUBE
+        </div>
+        <div class="mail">
+          <p>contact@petuxedo.com</p>
+        </div>
+      </section>
   </div>
+
+
 </div>

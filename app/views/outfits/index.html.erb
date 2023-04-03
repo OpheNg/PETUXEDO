@@ -47,7 +47,7 @@
              <div class="details">
               <h3><%= outfit.name %></h3>
               <h4><%= outfit.price %> €</h4>
-              <p> <%= outfit.description %></p>
+               <%#= outfit.description %>
                 <% outfit.photos.each do |photo| %>
                   <%= link_to outfit_path(outfit), class:"linkimg" do %>
                    <%= cl_image_tag photo.key, height:"400px", class:"img" %>

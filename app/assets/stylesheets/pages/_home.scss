@@ -1,16 +1,18 @@
 // Specific CSS for your home-page
 .homepage{
-  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1678289449/petuxedo/Sans_titre_-_2023-03-08T115657.543_ohf1kl.png');
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1680540021/petuxedo/PETUXEDO_1_jh0ezl.png');
   background-position: center;
   background-size: cover;
   min-height: 100vh;
   height: 100%;
   padding: 40px;
+  position: relative;
 }
 .home-title{
   display: flex;
   flex-direction: column;
   width: fit-content;
+  margin-left: 100px;
 }
 .home-title p{
   font-weight: bold;
@@ -19,12 +21,12 @@
   font-size: 24px;
 }
 .home-info{
-  background-color: rgb(237, 237, 237);
+  background-color: rgba(237, 237, 237, 0.86);
   border-radius: 20px;
   padding: 30px;
   width: 300px;
   height: 400px;
-  align-self: flex-end;
+  // align-self: flex-end;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
   display: flex;
   flex-direction: column;
@@ -67,32 +69,25 @@ a.homelink:hover{
   color: rgb(66, 28, 190);
 }
 
-.promo{
-  margin-top: 160px;
-
-}
-.promo h3{
-  background-color: rgb(124, 213, 124);
-  padding: 4px 8px;
-  border-radius: 6px;
-  margin-bottom: 0;
-  color: rgb(66, 28, 190);
-}
-.promo h5{
-  background-color:rgb(66, 28, 190);
-  color: rgb(236, 236, 236);
-  width: fit-content;
-  border-radius: 6px;
-  padding: 6px 0 6px 8px;
-}
-span.code{
-  background-color: rgb(251, 77, 77);
-  color: yellow;
-  border-radius:  0 6px 6px 0;
-  padding:5px 8px ;
-}
-
 // ____________________________________________
 .home-info p{
   font-size: 18px;
+}
+
+.right-column{
+  background-color: #323232;
+  color: rgb(238, 238, 238);
+  width: 22%;
+  position: fixed;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 30px 20px;
+
+
+}
+.homebox{
+  display: flex;
+  justify-content: space-between;
 }
