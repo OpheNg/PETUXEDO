@@ -11,7 +11,7 @@
         <%# <a href="#home" class="active">Home</a> %>
 
         <% if user_signed_in? %>
-          <%= link_to "Home", myspace_path%>
+          <%= link_to "Home", myspace_path, class:"homenavlink"%>
         <% end %>
         <%= link_to "My cart" %>
         <%= link_to "About", about_path %>

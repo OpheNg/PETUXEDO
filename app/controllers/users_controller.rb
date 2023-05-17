@@ -54,11 +54,11 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :firstname, :address,:email,:tel,:photo, :password)
+    params.require(:user).permit(:name, :firstname, :address,:email,:phone,:photo, :password)
   end
 
   def user_params_update
-    params.require(:user).permit(:name, :firstname, :address,:email,:tel,:photo, :password)
+    params.require(:user).permit(:name, :firstname, :address,:email,:phone,:photo, :password)
 
     # this is a test
   end
