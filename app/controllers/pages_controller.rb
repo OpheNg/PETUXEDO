@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @outfits = Outfit.all
+    @user = current_user
   end
   def profile
     @user = current_user

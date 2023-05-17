@@ -1,24 +1,24 @@
-<h1>My profile</h1>
+<div class="userprofilebox">
+  <h1>My profile</h1>
 
-<section class=profilecard>
-  <div class="usercard">
-    <div class="userphoto">
-        <% if @user.photo.attached?%>
-          <%= cl_image_tag @user.photo.key, height: 220, width: 220, crop: :fill, class:"ava"%>
-        <%else %>
-          <%= image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1671992140/click%20n%20pole/avatar_p2fgt6.jpg' , height: 160, width: 160, crop: :fill%>
-        <%end %>
-        <%= link_to "Edit", edit_user_path(@user)  %>
-    </div>
-    <div class="userinfos">
-      <p><%= @user.firstname %></p>
-      <p><%= @user.name %></p>
-      <p><%= @user.tel %></p>
-      <p><%= @user.address %></p>
+    <section class=profilecard>
+      <div class="usercard">
+        <div class="userphoto">
+            <% if @user.photo.attached?%>
+              <%= cl_image_tag @user.photo.key, height: 220, width: 220, crop: :fill, class:"ava"%>
+            <%else %>
+              <%= image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1671992140/click%20n%20pole/avatar_p2fgt6.jpg' , height: 160, width: 160, crop: :fill%>
+            <%end %>
+            <%= link_to "Edit", edit_user_path(@user)  %>
+        </div>
+        <div class="userinfos">
+          <p><%= @user.firstname %></p>
+          <p><%= @user.name %></p>
+          <p><%= @user.tel %></p>
+          <p><%= @user.address %></p>
 
-    </div>
+        </div>
 
-  </div>
-
-
-</section>
+      </div>
+    </section>
+</div>
