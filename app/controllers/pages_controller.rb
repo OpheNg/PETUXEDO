@@ -4,4 +4,7 @@ class PagesController < ApplicationController
   def home
     @outfits = Outfit.all
   end
+  def profile
+    @user = current_user
+  end
 end

@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  
+
   resources :contacts, only: [:new, :create]
   resources :outfits
+  resources :users
 
   get 'myspace',    to: 'pages#myspace'
   get 'about',      to: 'pages#about'

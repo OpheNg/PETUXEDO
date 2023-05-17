@@ -1,0 +1,20 @@
+
+<div class="editprofile">
+<br>
+
+  <div class="userform">
+  <h3 style='color:gray;'>My informations</h3>
+  <br>
+    <%= simple_form_for @user do |f| %>
+        <%= f.input :photo, as: :file %>
+        <%= f.input :firstname %>
+        <%= f.input :name %>
+        <%= f.input :tel %>
+        <%= f.input :email,disabled: true %>
+        <%#= f.input :address %>
+        <%= f.input :address %>
+      <br>
+      <%= f.button :submit, 'Edit profile' %>
+    <% end %>
+  </div>
+</div>
