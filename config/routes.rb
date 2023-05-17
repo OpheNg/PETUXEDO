@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   resources :contacts, only: [:new, :create]
   resources :outfits
   resources :users
+  resources :orders
 
   get 'myspace',    to: 'pages#myspace'
-  get 'about',      to: 'pages#about'
   get 'contact',    to: 'pages#contact'
   get 'profile',    to: 'pages#profile'
 
